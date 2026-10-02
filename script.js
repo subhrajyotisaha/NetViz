@@ -455,6 +455,7 @@ function togglePlay(forcePlay = null) {
     }
     
     if (isPlaying) {
+        clearInterval(playInterval);
         if(currentStep >= currentFlow.length - 1) {
             resetVisualization();
         }
