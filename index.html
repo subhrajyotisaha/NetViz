@@ -118,10 +118,18 @@
         <div class="w-full md:w-2/3 bg-gray-900 relative flex flex-col h-full bg-grid-pattern">
             
             <!-- Visualization Header & Controls -->
-            <div class="p-4 bg-gray-800/80 backdrop-blur border-b border-gray-700 flex justify-between items-center z-10">
-                <h2 class="font-semibold text-gray-200">
-                    <i class="fa-solid fa-diagram-project text-yellow-500 mr-2"></i>Live Protocol Flow
-                </h2>
+            <div class="p-4 bg-gray-800/80 backdrop-blur border-b border-gray-700 flex flex-wrap gap-4 justify-between items-center z-10">
+                <div class="flex items-center space-x-4">
+                    <h2 class="font-semibold text-gray-200 flex items-center">
+                        <i class="fa-solid fa-diagram-project text-yellow-500 mr-2"></i>Live Protocol Flow
+                    </h2>
+                    <!-- Layer Toggle -->
+                    <div class="bg-gray-900 flex rounded-lg p-1 border border-gray-700">
+                        <button class="layer-btn px-3 py-1 rounded text-sm font-medium bg-blue-600 text-white transition-colors" data-layer="app">Application Layer</button>
+                        <button class="layer-btn px-3 py-1 rounded text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 transition-colors" data-layer="transport">Transport Layer</button>
+                    </div>
+                </div>
+                <!-- Controls -->
                 <div class="flex space-x-2 bg-gray-900 rounded-lg p-1 border border-gray-700">
                     <button id="ctrl-prev" class="ctrl-btn px-3 py-1 rounded hover:bg-gray-700 text-gray-400 hover:text-white disabled:opacity-50" title="Previous Step"><i class="fa-solid fa-backward-step"></i></button>
                     <button id="ctrl-playpause" class="ctrl-btn px-3 py-1 rounded hover:bg-gray-700 text-gray-400 hover:text-white" title="Play/Pause"><i class="fa-solid fa-pause"></i></button>
